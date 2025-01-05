@@ -1,14 +1,16 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Welcome Page</title>
-    <!-- Link to Google Fonts -->
+
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: lightblue;
+            background-color: rosybrown;
             font-family: 'Pacifico', cursive; 
             padding: 0;
             display: flex;
@@ -17,6 +19,7 @@
             height: 100vh;
             text-align: center;
             overflow: hidden;
+            flex-direction: column; /* Align elements vertically */
         }
 
         h1 {
@@ -38,11 +41,32 @@
                 transform: translateX(100%);
             }
         }
+
+        audio {
+            margin-top: 20px;
+            background-color: white;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
     <div>
         <h1>Welcome</h1>
+        <h1>to</h1>
+        <h1>My website</h1>
     </div>
+
+    <audio controls autoplay>
+        <source src="audio/music.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
 </body>
 </html>
+
+
+
+
+
+
+
+

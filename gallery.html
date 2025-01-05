@@ -1,36 +1,124 @@
 <html>
     <head>
         <style>
-        body{background-image: url(images/background\ kotak\ biru.jpg);}
-        h1 {text-align: center;}
-        h3 {text-align: center;}
+            body {
+                background-image: url(images/background\ kotak\ biru.jpg);
+                font-family: Arial, sans-serif;
+                text-align: center;
+            }
+            h1 {
+                font-family: monospace;
+                color: black;
+            }
+            h3 {
+                text-align: center;
+            }
+            .image-container {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                margin: 20px 0;
+            }
+            .image-container img {
+                height: 300px;
+                border: 2px solid black;
+                border-radius: 5px;
+                transition: transform 0.3s ease; 
+                cursor: pointer;
+            }
+            .image-container img:hover {
+                transform: scale(1.2);
+            }
 
+            #back-to-top {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background-color: brown;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                padding: 10px 15px;
+                cursor: pointer;
+                display: none;
+                font-size: 14px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+            }
+
+            #back-to-top:hover {
+                background-color: #0056b3;
+            }
         </style>
-
-        <body>
-            <h1 style="font-family:monospace;color:black;">WELCOME TO MY GALLERY </h1>
-            <hr color="black" width="500px">
-
-            <br>
-
-            <h3 {text-align: center;}>˚ʚ♡ɞ˚My family˚ʚ♡ɞ˚</h3>
-            <h4>Click on face to know family details</h4>
-
-            <img src="images/gambar full family.jpg" alt="My full family" height="300">
-
-            <h3 {text-align: center;}>˚ʚ♡ɞ˚My highschool friends˚ʚ♡ɞ˚</h3>
-
-        
-
-
-        </body>
-
-
-
-
-
-
-        
-    </style>
     </head>
+    <body>
+        <h1><u>WELCOME TO MY GALLERY</u></h1>
+
+        <h3>˚ʚ♡ɞ˚My family˚ʚ♡ɞ˚</h3>
+        <div class="image-container">
+            <img src="images/gambar full family.jpg" alt="My full family">
+        </div>
+
+        <h3>˚ʚ♡ɞ˚My highschool friends˚ʚ♡ɞ˚</h3>
+        <div class="image-container">
+            <img src="images/gambar_sekolah1.jpg" alt="My highschool friends">
+            <img src="images/gambar_sekolah2.jpg" alt="My highschool friends">
+            <img src="images/gambar_sekolah3.jpg" alt="My highschool friends">
+        </div>
+
+        <h3>˚ʚ♡ɞ˚My university friends˚ʚ♡ɞ˚</h3>
+        <div class="image-container">
+            <img src="images/gambar_uni1.jpg" alt="My university friends">
+            <img src="images/gambar_uni2.jpg" alt="My university friends">
+            <img src="images/gambar_uni3.jpg" alt="My university friends">
+        </div>
+
+        <h3>˚ʚ♡ɞ˚Random dumps˚ʚ♡ɞ˚</h3>
+        <div style="text-align: center;">
+            <video controls height="250">
+                <source src="videos/videokelas.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <br>
+        <div class="image-container">
+            <img src="images/gambarstaycationpd.jpg" alt="Girls staycation">
+            <img src="images/gambarsayadekan.jpg" alt="Hazrina">
+            <img src="images/gambarsekelas.JPG" alt="My university classmates">
+        </div>
+
+        <div class="image-container">
+            <img src="images/gambarbirthdaymak.jpg" alt="Mom's birthday">
+            <img src="images/gambarwithikmal.jpg" alt="My boyfriend">
+            <img src="images/gambaraisyahdengankakcik.jpg" alt="Aisyah with Kak Cik">
+            <img src="images/gambararkib.jpg" alt="My university friends">
+        </div>
+
+        <button id="back-to-top">Back to Top</button>
+
+        <script>
+            const backToTopButton = document.getElementById("back-to-top");
+
+            window.onscroll = function () {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    backToTopButton.style.display = "block";
+                } else {
+                    backToTopButton.style.display = "none";
+                }
+            };
+
+            backToTopButton.addEventListener("click", function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                });
+            });
+        </script>
+
+        <h4 style="font-weight: normal;">Don't forget to</h4>
+        <a href="https://www.instagram.com/hzrnzhr?igsh=OGhndjRubnFoODQ3" accesskey="1">Follow my YouTube</a> (ALT1)
+        <br>
+        <a href="https://youtube.com/@hazrinazahari5376?si=kahBx3e0qS7muGEk" accesskey="2">Follow my Instagram</a> (ALT2)
+        <h4 style="font-weight: normal;">for more content and photos!!</h4>
+    </body>
 </html>

@@ -1,10 +1,10 @@
 body
-{background-color: lightblue;}
+{background-image: url('images/background\ kotak\ biru.jpg');}
+{background-color: rosybrown;}
 
 a:link
 {
     color:maroon;
-    background-color: whitesmoke;
     text-decoration: none;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -31,15 +31,10 @@ a:hover
 
 a:active
 {
-    color:indigo;
+    color:gainsboro;
     background-color: thistle;
     text-decoration: none;
     padding: 15px;
-}
-
-h1
-{
-    color: cadetblue
 }
 
 /body
